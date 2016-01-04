@@ -1,0 +1,7 @@
+{
+  "generator-react-webpack": {
+    "appName": "uamProject",
+    "style": "scss",
+    "postcss": true
+  }
+}
