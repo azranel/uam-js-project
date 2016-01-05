@@ -1,0 +1,16 @@
+.btn {
+  margin: .5rem;
+  padding: .5rem;
+}
+
+.add-to-basket {
+  background-color: $secondary-color;
+  font-weight: bolder;
+  color: $shadow-color;
+  transition: 300ms;
+
+  &:hover {
+    background-color: $gold-color;
+    color: $secondary-color;
+  }
+}
