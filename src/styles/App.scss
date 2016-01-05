@@ -1,0 +1,27 @@
+@import "grid";
+@import "text-decorations";
+@import "colors";
+@import "components/products";
+
+body {
+  color: $secondary-color;
+  line-height: 1.6rem;
+}
+
+header {
+  padding: 2rem 0 2rem 0;
+  background: $primary-color;
+}
+
+.btn {
+  margin: .5rem;
+  padding: .5rem;
+}
+
+.add-to-basket {
+  background-color: BLACK;
+
+  &:hover {
+    background-color: RED;
+  }
+}
