@@ -10,7 +10,8 @@ class BasketStore {
   }
 
   addProduct(product) {
-    this.setState({ products: products.push(product) });
+    this.state.products.push(product);
+    this.setState({ products: this.state.products });
   }
 }
 

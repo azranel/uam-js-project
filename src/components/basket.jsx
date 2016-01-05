@@ -9,6 +9,9 @@ export default class Basket extends React.Component {
     super(props);
     this.state = { products: [] };
     BasketActions.getProducts();
+    this._onChange = this._onChange.bind(this);
+    this.basketValue = this.basketValue.bind(this);
+    this.products = this.products.bind(this);
   }
 
   componentDidMount() {
@@ -24,12 +27,16 @@ export default class Basket extends React.Component {
   }
 
   basketValue() {
-    return _.sum(this.props.products.map(product => price));
+    return _.round(_.sum(this.state.products, 'price'), 2);
   }
 
   products() {
     const productRows = this.state.products.map(product => {
-      return <p>{product.name}</p>;
+      return (
+        <div className="product">
+          {product.name} - {product.price}
+        </div>
+      );
     });
     return (
       <div className="products">
@@ -44,9 +51,9 @@ export default class Basket extends React.Component {
         <h3 className='number text-center'>
           Number of products: {this.state.products.length}
         </h3>
-        {this.products.bind(this)}
+        {this.products()}
         <h3 className='value text-center'>
-          Basket value: {this.basketValue.bind(this)}
+          Basket value: {this.basketValue()}
         </h3>
       </div>
     );

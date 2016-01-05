@@ -16,7 +16,6 @@ class ProductStore {
         this.setState({ products: products });
         this.emitChange();
       }).catch(() => {
-        debugger;
       });
     return false;
   }

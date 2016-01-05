@@ -73,8 +73,10 @@ class AppComponent extends React.Component {
   products() {
     const productRows = this.state.products.map(product => <Product key={product.id} product={product} />);
     return (
-      <div className="products">
-        {productRows}
+      <div className="menu">
+        <div className="products">
+          {productRows}
+        </div>
       </div>
     );
   }

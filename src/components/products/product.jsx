@@ -1,5 +1,7 @@
 import React, {PropTypes} from 'react';
 
+import BasketActions from '../../actions/BasketActions';
+
 export default class Product extends React.Component {
   ingredients() {
     const ingredientRows = this.props.product.ingredients.
@@ -10,7 +12,12 @@ export default class Product extends React.Component {
       </ul>
     )
   }
-  
+
+  addProductToBasket() {
+    const product = this.props.product;
+    BasketActions.addProduct(product);
+  }
+
   render() {
     const { product } = this.props;
     return(
@@ -22,7 +29,7 @@ export default class Product extends React.Component {
         <div className="price">
           Price: { product.price }
         </div>
-        <div className="btn add-to-basket text-center">
+        <div className="btn add-to-basket text-center" onClick={this.addProductToBasket.bind(this)}>
           Add to basket
         </div>
       </div>
@@ -31,7 +38,9 @@ export default class Product extends React.Component {
 }
 
 Product.propTypes = {
-  id: PropTypes.number.isRequired,
-  name: PropTypes.string.isRequired,
-  price: PropTypes.number.isRequired
+  product: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired
+  })
 };

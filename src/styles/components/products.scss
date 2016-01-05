@@ -1,24 +1,27 @@
-.products {
-  margin: 2rem;
-  display: flex;
-  justify-content: space-around;
+.menu {
   flex-grow: 2;
 
-  .product {
-    box-shadow: 5px 20px 50px 0px $shadow-color;
-    background-color: $primary-color;
-    padding: 2rem;
-    border-radius: 25px;
-    .name {
-      font-size: 2rem;
-    }
+  .products {
+    margin: 2rem;
+    display: flex;
+    justify-content: space-around;
 
-    .ingredients {
-      @extend text-center;
-    }
+    .product {
+      box-shadow: 5px 20px 50px 0px $shadow-color;
+      background-color: $primary-color;
+      padding: 2rem;
+      border-radius: 25px;
+      .name {
+        font-size: 2rem;
+      }
 
-    .ingredient {
+      .ingredients {
+        @extend text-center;
+      }
 
+      .ingredient {
+
+      }
     }
   }
 }
