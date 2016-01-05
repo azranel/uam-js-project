@@ -6,6 +6,7 @@ import ProductStore from '../stores/ProductStore';
 import ProductActions from '../actions/ProductActions';
 
 import Product from './products/product';
+import Basket from './basket';
 
 class AppComponent extends React.Component {
   constructor(props) {
@@ -86,7 +87,7 @@ class AppComponent extends React.Component {
         </header>
         <div className='row'>
           {this.products()}
-          <div className="basket"></div>
+          <Basket />
         </div>
       </div>
     );

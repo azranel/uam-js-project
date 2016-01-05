@@ -1,8 +1,8 @@
 .products {
-  width: 70%;
   margin: 2rem;
   display: flex;
   justify-content: space-around;
+  flex-grow: 2;
 
   .product {
     box-shadow: 5px 20px 50px 0px $shadow-color;
@@ -21,8 +21,4 @@
 
     }
   }
-}
-
-.basket {
-  background-color: RED;
 }

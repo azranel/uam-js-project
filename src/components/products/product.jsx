@@ -10,6 +10,7 @@ export default class Product extends React.Component {
       </ul>
     )
   }
+  
   render() {
     const { product } = this.props;
     return(
