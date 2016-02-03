@@ -8,51 +8,13 @@ import ProductActions from '../actions/ProductActions';
 import Product from './products/product';
 import Basket from './basket';
 
+import { Link } from 'react-router';
+
 class AppComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      products: [
-        {
-          'id': 1,
-          'name': 'Margherita',
-          'ingredients': [
-            'Sos',
-            'Ser'
-          ],
-          'price': 14.9
-        },
-        {
-          'id': 2,
-          'name': 'Funghi ',
-          'ingredients': [
-            'Sos',
-            'Ser',
-            'Pieczarki'
-          ],
-          'price': 16.9
-        },
-        {
-          'id': 3,
-          'name': 'Vesuvio',
-          'ingredients': [
-            'Sos',
-            'Ser',
-            'Szynka'
-          ],
-          'price': 17.9
-        },
-        {
-          'id': 4,
-          'name': 'Salami',
-          'ingredients': [
-            'Sos',
-            'Ser',
-            'Salami'
-          ],
-          'price': 17.9
-        }
-      ]
+      products: []
     };
     ProductActions.getProducts();
     this._onProductChange = this._onProductChange.bind(this);
@@ -85,7 +47,8 @@ class AppComponent extends React.Component {
     return (
       <div className='index'>
         <header className='text-center'>
-          <h2>Pizzeria Italiano</h2>
+          <h2>Pizzeria</h2>
+          <Link to="/contact"><p>Contact</p></Link>
         </header>
         <div className='row'>
           {this.products()}
