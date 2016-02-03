@@ -1,15 +1,18 @@
 .menu {
   flex-grow: 2;
+  width: 70%;
 
   .products {
     margin: 2rem;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 
     .product {
       box-shadow: 5px 20px 50px 0px $shadow-color;
       background-color: $primary-color;
       padding: 2rem;
+      margin: 1rem;
       border-radius: 25px;
       .name {
         font-size: 2rem;
@@ -19,8 +22,8 @@
         @extend text-center;
       }
 
-      .ingredient {
-
+      input[type="number"] {
+        width: 3rem;
       }
     }
   }

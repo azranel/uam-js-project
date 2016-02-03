@@ -1,9 +1,19 @@
 .basket {
   box-shadow: -10px 0 20px 0 $shadow-color;
+
   color: BLACK;
   flex-grow: 2;
+  height: 100vh;
 
   .products {
     padding: 1.5rem;
+
+    .product {
+      margin-bottom: 1.5rem;
+
+      input[type="number"] {
+        width: 3rem;
+      }
+    }
   }
 }

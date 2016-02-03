@@ -1,13 +1,37 @@
+$transition-time: 300ms;
+$danger-button-bg: #FF0000;
+$primary-button-bg: #0000FF;
+
 .btn {
   margin: .5rem;
   padding: .5rem;
+}
+
+.danger {
+  background: darken($danger-button-bg, 20%);
+  color: WHITE;
+  transition: $transition-time;
+
+  &:hover {
+    background: $danger-button-bg;
+  }
+}
+
+.primary {
+  background: darken($primary-button-bg, 20%);
+  color: WHITE;
+  transition: $transition-time;
+
+  &:hover {
+    background: $primary-button-bg;
+  }
 }
 
 .add-to-basket {
   background-color: $secondary-color;
   font-weight: bolder;
   color: $shadow-color;
-  transition: 300ms;
+  transition: $transition-time;
 
   &:hover {
     background-color: $gold-color;
