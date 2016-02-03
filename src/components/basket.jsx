@@ -1,6 +1,8 @@
 import React, {PropTypes} from 'react';
 import _ from 'lodash';
 
+import Product from './basket/product';
+
 import BasketActions from '../actions/BasketActions';
 import BasketStore from '../stores/BasketStore';
 
@@ -31,11 +33,9 @@ export default class Basket extends React.Component {
   }
 
   products() {
-    const productRows = this.state.products.map(product => {
+    const productRows = _.uniq(this.state.products).map(product => {
       return (
-        <div className="product">
-          {product.name} - {product.price}
-        </div>
+        <Product product={product} />
       );
     });
     return (
@@ -43,6 +43,10 @@ export default class Basket extends React.Component {
         {productRows}
       </div>
     );
+  }
+
+  finalizeOrder() {
+    debugger;
   }
 
   render() {
@@ -55,10 +59,19 @@ export default class Basket extends React.Component {
         <h3 className='value text-center'>
           Basket value: {this.basketValue()}
         </h3>
+        <span className="btn primary" onClick={this.finalizeOrder}>
+          Order!
+        </span>
       </div>
     );
   }
 }
 
 Basket.propTypes = {
+  products: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    ingredients: PropTypes.arrayOf(PropTypes.string),
+    price: PropTypes.number.isRequired
+  }))
 };

@@ -4,7 +4,9 @@ class BasketActions {
   constructor() {
     this.generateActions(
       'addProduct',
-      'getProducts'
+      'getProducts',
+      'removeProducts',
+      'changeNumberOfProducts'
     );
   }
 }
