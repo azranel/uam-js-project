@@ -12,10 +12,12 @@ class ProductStore {
 
   getProducts() {
     ProductSource.all()
-      .then((products) => {
+      .done((products) => {
         this.setState({ products: products });
         this.emitChange();
-      }).catch(() => {
+      }).fail(() => {
+        this.setState({ products: [] })
+        this.emitChange();
       });
     return false;
   }

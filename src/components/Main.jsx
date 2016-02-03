@@ -14,43 +14,43 @@ class AppComponent extends React.Component {
     this.state = {
       products: [
         {
-          "id": 1,
-          "name": "Margherita",
-          "ingredients": [
-            "Sos",
-            "Ser"
+          'id': 1,
+          'name': 'Margherita',
+          'ingredients': [
+            'Sos',
+            'Ser'
           ],
-          "price": 14.9
+          'price': 14.9
         },
         {
-          "id": 2,
-          "name": "Funghi ",
-          "ingredients": [
-            "Sos",
-            "Ser",
-            "Pieczarki"
+          'id': 2,
+          'name': 'Funghi ',
+          'ingredients': [
+            'Sos',
+            'Ser',
+            'Pieczarki'
           ],
-          "price": 16.9
+          'price': 16.9
         },
         {
-          "id": 3,
-          "name": "Vesuvio",
-          "ingredients": [
-            "Sos",
-            "Ser",
-            "Szynka"
+          'id': 3,
+          'name': 'Vesuvio',
+          'ingredients': [
+            'Sos',
+            'Ser',
+            'Szynka'
           ],
-          "price": 17.9
+          'price': 17.9
         },
         {
-          "id": 4,
-          "name": "Salami",
-          "ingredients": [
-            "Sos",
-            "Ser",
-            "Salami"
+          'id': 4,
+          'name': 'Salami',
+          'ingredients': [
+            'Sos',
+            'Ser',
+            'Salami'
           ],
-          "price": 17.9
+          'price': 17.9
         }
       ]
     };
@@ -73,8 +73,8 @@ class AppComponent extends React.Component {
   products() {
     const productRows = this.state.products.map(product => <Product key={product.id} product={product} />);
     return (
-      <div className="menu">
-        <div className="products">
+      <div className='menu'>
+        <div className='products'>
           {productRows}
         </div>
       </div>
@@ -83,9 +83,9 @@ class AppComponent extends React.Component {
 
   render() {
     return (
-      <div className="index">
+      <div className='index'>
         <header className='text-center'>
-          <h2>HELLO WORLD!</h2>
+          <h2>Pizzeria Italiano</h2>
         </header>
         <div className='row'>
           {this.products()}
