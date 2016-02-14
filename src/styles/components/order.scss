@@ -1,0 +1,62 @@
+.order {
+  padding: 4rem;
+
+  .product {
+    color: BLACK;
+    display: block;
+    width: 100%;
+    * {
+      width: 33%;
+    }
+
+    .count {
+      display: inline-block;
+
+    }
+
+    .name {
+      display: inline-block;
+
+    }
+
+    .price {
+      display: inline-block;
+
+    }
+
+  }
+
+  .form {
+    margin-top: 2rem;
+    width: 60%;
+
+    .field {
+      margin-bottom: 3rem;
+      display: flex;
+
+      * {
+        flex-basis: 50%;
+      }
+
+      label {
+        align-self: flex-start;
+        text-align: right;
+        margin-right: 2rem;
+      }
+
+      input {
+        height: 1rem;
+      }
+
+      input[name='remarks'] {
+        height: 300px;
+      }
+
+      .warning {
+        color: RED;
+        font-size: 1rem;
+        font-weight: 100;
+      }
+    }
+  }
+}

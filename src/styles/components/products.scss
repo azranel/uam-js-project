@@ -1,3 +1,5 @@
+$product-border-color: #000;
+
 .menu {
   flex-grow: 2;
   width: 70%;
@@ -11,9 +13,12 @@
     .product {
       box-shadow: 5px 20px 50px 0px $shadow-color;
       background-color: $primary-color;
+      color: $secondary-color;
       padding: 2rem;
       margin: 1rem;
       border-radius: 25px;
+      border: 1px solid $product-border-color;
+
       .name {
         font-size: 2rem;
       }
@@ -22,9 +27,6 @@
         @extend text-center;
       }
 
-      input[type="number"] {
-        width: 3rem;
-      }
     }
   }
 }

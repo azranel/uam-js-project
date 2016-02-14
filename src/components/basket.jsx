@@ -1,5 +1,6 @@
 import React, {PropTypes} from 'react';
 import _ from 'lodash';
+import { Link } from 'react-router';
 
 import Product from './basket/product';
 
@@ -45,10 +46,6 @@ export default class Basket extends React.Component {
     );
   }
 
-  finalizeOrder() {
-    debugger;
-  }
-
   render() {
     return(
       <div className="basket">
@@ -59,9 +56,11 @@ export default class Basket extends React.Component {
         <h3 className='value text-center'>
           Basket value: {this.basketValue()}
         </h3>
-        <span className="btn primary" onClick={this.finalizeOrder}>
-          Order!
-        </span>
+        <Link to='/order'>
+          <span className="btn primary">
+            Order!
+          </span>
+        </Link>
       </div>
     );
   }

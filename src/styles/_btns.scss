@@ -1,6 +1,7 @@
 $transition-time: 300ms;
 $danger-button-bg: #FF0000;
 $primary-button-bg: #0000FF;
+$disabled-button-bg: #555;
 
 .btn {
   margin: .5rem;
@@ -24,6 +25,15 @@ $primary-button-bg: #0000FF;
 
   &:hover {
     background: $primary-button-bg;
+  }
+}
+
+.disabled {
+  background-color: darken($disabled-button-bg, 20%);
+  color: WHITE;
+
+  &:hover {
+    background: $disabled-button-bg;
   }
 }
 

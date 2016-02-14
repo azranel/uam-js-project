@@ -10,6 +10,10 @@ class BasketStore {
     };
   }
 
+  getProducts() {
+    return this.state.products;
+  }
+
   addProduct(product) {
     this.state.products.push(product);
     this.setState({ products: this.state.products });

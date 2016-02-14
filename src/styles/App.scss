@@ -6,14 +6,16 @@
 @import "components/products";
 @import "components/basket";
 @import "components/contact-info";
+@import "components/order";
 
 
 body {
-  color: $secondary-color;
+  color: $text-color;
   line-height: 1.6rem;
 }
 
 header {
   padding: 2rem 0 2rem 0;
   background: $primary-color;
+  color: $secondary-color;
 }

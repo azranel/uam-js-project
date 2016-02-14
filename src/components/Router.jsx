@@ -4,6 +4,8 @@ import Route from 'react-router';
 
 import Menu from './Main';
 import Contact from './Contact';
+import Order from './Order';
+import Status from './Status';
 
 import { createHashHistory } from 'history';
 
@@ -16,6 +18,8 @@ const RouterElement = React.createClass({
         <Route path="/" component={Menu}>
         </Route>
         <Route path="/contact" component={Contact} />
+        <Route path="/order" component={Order} />
+        <Route path="/status/:orderId" component={Status} />
       </Router>
     );
   }
